@@ -1,6 +1,6 @@
 # Beer API
 
-1. Create a new file in the /src folder called Beer.js
+1. Create a new file in the /src folder called Beers.js
 
 2. Import the new Beers.js file in the App.js file `import { Beers } from './Beers';`
 
