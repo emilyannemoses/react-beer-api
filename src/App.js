@@ -1,31 +1,13 @@
-import './App.css';
-import axios from 'axios';
 import React from 'react';
-
-const baseURL = 'https://api.punkapi.com/v2/beers';
+import { Beers } from './Beers';
 
 function App() {
-  const [beer, setBeer] = React.useState(null);
-
-  React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setBeer(response.data);
-    });
-  }, []);
-
-  if (!beer) return null;
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <div>
-            {beer.map(function(arr, i) {
-              return <li>{arr.name}</li>;
-            })}
-          </div>
-        </header>
-      </div>
-    );
+  return (
+    <div>
+      <h1>All The Beers</h1>
+      <Beers></Beers>
+    </div>
+  );
 }
 
 export default App;
